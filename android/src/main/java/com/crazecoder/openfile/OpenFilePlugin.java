@@ -90,7 +90,10 @@ public class OpenFilePlugin implements MethodCallHandler
                             result(-3, "Permission denied: " + Manifest.permission.READ_MEDIA_AUDIO);
                             return;
                         }
-                    } else if (!Environment.isExternalStorageManager()) {
+                    // On devices that run Android 10 or higher, you don't need storage-related permissions to access and 
+                    // modify media files that your app owns, including files in the MediaStore.Downloads collection
+                    // https://developer.android.com/training/data-storage/shared/media#media_store    
+                    } else if (!isExternalStoragePublicPath() && !Environment.isExternalStorageManager()) {
                         result(-3, "Permission denied: " + Manifest.permission.MANAGE_EXTERNAL_STORAGE);
                         return;
                     }
