@@ -231,7 +231,6 @@ public class OpenFilePlugin implements MethodCallHandler
                 , Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getPath()
                 , Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_NOTIFICATIONS).getPath()
                 , Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PODCASTS).getPath()
-                , Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_RECORDINGS).getPath()
                 , Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_RINGTONES).getPath()
                 , Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_SCREENSHOTS).getPath()
         };
